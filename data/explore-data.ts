@@ -1,0 +1,1 @@
+export { productCategories as exploreCategories, products as exploreProducts } from "./products";
