@@ -28,7 +28,7 @@ export default function BottomNav() {
 
   return (
     <div className="fixed bottom-4 left-1/2 z-50 w-[94%] max-w-[430px] -translate-x-1/2">
-      <div className="glass-panel gradient-border rounded-[30px] p-2 shadow-float">
+      <div className="rounded-[24px] border border-[#E5E9F2] bg-white/96 p-2 shadow-[0_12px_30px_rgba(17,24,39,0.10)] backdrop-blur-[8px]">
         <div className="grid grid-cols-5 gap-1">
           {items.map((item) => {
             const Icon = item.icon;
@@ -39,14 +39,14 @@ export default function BottomNav() {
               <Link
                 key={item.href}
                 href={item.href}
-                className={`relative flex flex-col items-center justify-center rounded-[22px] px-1 py-2.5 text-[11px] font-medium transition ${
+                className={`relative flex flex-col items-center justify-center rounded-[18px] px-1 py-2.5 text-[11px] font-medium transition ${
                   active
-                    ? "bg-[#EAF0FF] text-[#4F7CFF] shadow-sm"
+                    ? "bg-[#EAF0FF] text-[#111827] shadow-sm"
                     : "text-[#5B6475]"
                 }`}
               >
                 <div className="relative mb-1">
-                  <Icon className={`h-5 w-5 ${active ? "scale-105" : ""}`} />
+                  <Icon className="h-5 w-5" />
                   {isCart && cartCount > 0 && (
                     <span className="absolute -right-2 -top-2 flex h-4 min-w-4 items-center justify-center rounded-full bg-[#111827] px-1 text-[9px] font-semibold text-white">
                       {cartCount > 99 ? "99+" : cartCount}
